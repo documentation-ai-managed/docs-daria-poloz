@@ -1,0 +1,173 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Daria Poloz, including new features and bug fixes.
+---
+
+## Overview
+
+Daria Poloz continuously evolves to help you better organize and manage your project documentation. This changelog lists all notable changes by version. You review releases in reverse chronological order, starting with the most recent.
+
+<Callout kind="info">
+  Subscribe to our RSS feed or join the Discord community to get notified about new releases automatically.
+</Callout>
+
+<Columns cols={3}>
+  <Card title="v1.2.0" icon="zap" href="#v120">
+    Real-time collaboration and performance boosts.
+  </Card>
+  <Card title="v1.1.0" icon="trending-up" href="#v110">
+    AI-powered summaries and improved search.
+  </Card>
+  <Card title="v1.0.0" icon="rocket" href="#v100">
+    Initial stable release with core features.
+  </Card>
+</Columns>
+
+## Recent Releases
+
+### v1.2.0 - 2024-10-15
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaborative editing for documents.
+- Introduced version history with diff viewer.
+
+## Improvements
+
+- Enhanced search with fuzzy matching and filters.
+- Optimized dashboard load times by `>40%`.
+
+## Bug Fixes
+
+- Fixed markdown rendering issues in nested lists.
+- Resolved sync conflicts during offline edits.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Before: Basic fetch
+  const docs = await fetch('https://api.example.com/docs');
+  
+  // After: With real-time updates
+  const docs = await fetch('https://api.example.com/docs?realtime=true');
+  ```
+  ```python
+  # Before: Basic requests
+  response = requests.get('https://api.example.com/docs')
+  
+  # After: With real-time flag
+  response = requests.get('https://api.example.com/docs', params={'realtime': True})
+  ```
+</CodeGroup>
+
+</Update>
+
+### v1.1.0 - 2024-09-20
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- AI-generated document summaries and tags.
+- Customizable dashboard widgets.
+
+## Improvements
+
+- Better mobile responsiveness for all views.
+
+## Bug Fixes
+
+- Fixed export to PDF with images.
+- Corrected API rate limiting errors.
+
+</Update>
+
+### v1.0.0 - 2024-08-10
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Full Markdown editor with live preview.
+- Project organization with folders and tags.
+- API access for integrations (`https://api.example.com`).
+
+## Breaking Changes
+
+- Updated config format from YAML to JSON.
+
+## Bug Fixes
+
+- Initial stability improvements.
+
+</Update>
+
+## Upgrade Guide
+
+Follow these steps to upgrade Daria Poloz smoothly.
+
+<Steps>
+  <Step title="Backup Data" icon="database">
+    Export your projects:
+    
+````bash
+daria export --all-projects > backup.json
+````
+  </Step>
+  <Step title="Update Package" icon="download">
+    <Tabs>
+      <Tab title="npm" icon="package">
+````bash
+npm install daria-poloz@latest
+````
+      </Tab>
+      <Tab title="yarn" icon="package">
+````bash
+yarn add daria-poloz@latest
+````
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Migrate Config" icon="settings">
+    Convert old YAML configs:
+    
+````bash
+daria migrate-config old-config.yaml new-config.json
+````
+  </Step>
+  <Step title="Restart Service" icon="refresh-cw">
+    Restart and verify:
+    
+````bash
+daria restart && daria status
+````
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Test upgrades in a staging environment first.
+</Callout>
+
+## Backward Compatibility
+
+<Expandable title="Breaking Changes Details" default-open="true">
+  v1.0.0 changed the config format from YAML to JSON. Use the migration tool shown above. All APIs remain backward compatible except for deprecated endpoints marked with `x-deprecated`.
+</Expandable>
+
+## Upcoming Features
+
+<ExpandableGroup>
+  <Expandable title="Q4 2024: Advanced Integrations" default-open="true">
+    - GitHub sync for repos.
+    - Slack notifications for updates.
+  </Expandable>
+  <Expandable title="Q1 2025: AI Enhancements">
+    - Auto-generated diagrams from text.
+    - Natural language search.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="success">
+  Found a bug? [Submit feedback](https://github.com/example/daria-poloz/issues).
+</Callout>

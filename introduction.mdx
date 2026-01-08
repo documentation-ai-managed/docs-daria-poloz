@@ -1,0 +1,104 @@
+---
+title: Introduction to Daria Poloz
+description: Discover Daria Poloz, your default documentation space for organizing and managing project documentation with ease and efficiency.
+---
+
+## Overview
+
+Daria Poloz provides a centralized documentation space where you organize, manage, and collaborate on all your project documentation. You create structured pages, embed code examples, and share knowledge efficiently without switching tools. This platform supports MDX for rich, interactive docs with components like tabs and steps.
+
+<Callout kind="info">
+Daria Poloz uses the brand color `#3B82F6` for primary elements. Apply it in your custom themes or UI customizations to maintain consistency.
+</Callout>
+
+## Key Benefits
+
+Daria Poloz streamlines your documentation workflow. You benefit from version control, real-time collaboration, and seamless integration with your existing stack.
+
+<Columns cols={3}>
+  <Card title="Centralized Organization" icon="folder" href="#organization">
+    Keep all project docs in one searchable space. Tag pages and use hierarchies for easy navigation.
+  </Card>
+  <Card title="Rich MDX Components" icon="code" href="#components">
+    Build interactive docs with `<Tabs>`, `<Steps>`, and more. No need for separate tools.
+  </Card>
+  <Card title="Collaboration Tools" icon="users" href="#collaboration">
+    Invite team members, track changes, and comment directly on pages.
+  </Card>
+</Columns>
+
+## Brand Guidelines
+
+Follow these guidelines to align your documentation with Daria Poloz branding.
+
+- **Primary Color:** `#3B82F6` – Use for buttons, links, and accents.
+- **Typography:** Clean sans-serif fonts for readability.
+- **Icons:** Lucide library for consistent visuals.
+
+<Expandable title="Advanced Branding" default-open="false">
+Customize your space further by adding logos and custom CSS variables like `--brand-primary: #3B82F6;`.
+</Expandable>
+
+## Quick Start
+
+Get up and running in minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://dashboard.example.com` with your email.
+  </Step>
+  <Step title="Set Up Space" icon="settings">
+    Create a new documentation space named "My Project Docs".
+  </Step>
+  <Step title="Add First Page" icon="file-plus">
+    Click "New Page" and use the MDX editor to draft your introduction.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Preview and publish. Share the link with your team.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JavaScript,Python">
+```javascript
+// Embed a Daria Poloz page in your app
+const embedDoc = (pageId) => {
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://docs.example.com/embed/${pageId}`;
+  iframe.style.border = 'none';
+  document.body.appendChild(iframe);
+};
+```
+```python
+# Python example to fetch page content via API
+import requests
+
+response = requests.get(
+  'https://api.example.com/docs/pages/my-intro',
+  headers={'Authorization': 'Bearer YOUR_API_KEY'}
+)
+print(response.json())
+```
+</CodeGroup>
+
+## Next Steps
+
+Explore more to unlock full potential.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="rocket" href="/quickstart">
+    Dive into advanced setup and first project.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys and tokens.
+  </Card>
+  <Card title="Customization" icon="palette" href="/configuration">
+    Tailor themes and components.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    Stay updated with latest features.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+Start with the Quickstart Guide to build your first complete documentation set. You'll be publishing interactive pages in under 10 minutes.
+</Callout>
